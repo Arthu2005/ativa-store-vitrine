@@ -47,6 +47,7 @@ button{font:inherit;color:inherit}
 .hdr.scrolled .hdr-in{min-height:56px}
 .logo{display:flex;align-items:center;gap:10px;white-space:nowrap;text-decoration:none;font:800 15px/1 var(--f-body);font-stretch:118%;letter-spacing:.08em;text-transform:uppercase}
 .logo svg{width:34px;height:34px;flex:none}
+@media (max-width:419px){.hdr .logo{font-size:13px;letter-spacing:.04em;gap:8px}.hdr .logo svg{width:30px;height:30px}.hdr-in{gap:10px}}
 .nav{display:none;gap:28px}
 .nav a{font:700 13px/1 var(--f-body);font-stretch:110%;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;padding:8px 0;position:relative}
 .nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:3px;border-radius:3px;background:var(--lime);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
