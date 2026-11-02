@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ativa Store — Vista o seu movimento (protótipo)</title>
+<meta name="description" content="Protótipo da vitrine digital da Ativa Store: moda fitness para mulheres que vivem em movimento.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F5F6F1">
+<meta property="og:title" content="Ativa Store — protótipo da vitrine digital">
+<meta property="og:description" content="Seu melhor pré-treino é um look novo!">
+<meta property="og:image" content="img/shorts-verao-1-sm.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23121413'/%3E%3Cpath d='M20 8 L31 30 H26.5 L20 17 L13.5 30 H9 Z' fill='%23fff'/%3E%3Cpath d='M7 27 Q20 17 34 24' stroke='%23A3C93A' stroke-width='3.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=Big+Shoulders+Display:wght@900&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/shorts-verao-1.jpg">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<div class="demo-bar" id="demo-bar">Protótipo para validação com a loja — não é o site oficial. <a href="painel/">Abrir o painel da loja</a> <a href="direcoes.html">Direções criativas</a></div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#topo" data-logo></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#lancamentos">Lançamentos</a>
+      <a href="#looks">Looks</a>
+      <a href="#loja">A loja</a>
+    </nav>
+    <div class="hdr-actions">
+      <button class="btn btn--lime btn--sm" type="button" data-wa-general>WhatsApp</button>
+      <button class="burger" type="button" aria-label="Abrir menu" aria-controls="menu" data-open-menu><i></i></button>
+    </div>
+  </div>
+</header>
+
+<dialog class="menu" id="menu" aria-label="Menu">
+  <div class="menu-in">
+    <div class="menu-top"><span class="logo" data-logo style="color:#F5F6F1"></span><button class="menu-close" type="button" aria-label="Fechar menu" data-close-menu>×</button></div>
+    <nav aria-label="Menu do celular">
+      <a href="#catalogo" data-close-menu>Catálogo</a>
+      <a href="#lancamentos" data-close-menu>Lançamentos</a>
+      <a href="#looks" data-close-menu>Looks</a>
+      <a href="#loja" data-close-menu>A loja</a>
+    </nav>
+    <button class="btn btn--lime btn--block" type="button" data-wa-general>Falar no WhatsApp</button>
+  </div>
+</dialog>
+
+<main id="topo">
+  <section class="hero" id="hero" aria-label="Destaque"></section>
+  <div id="blocos"></div>
+</main>
+
+<footer class="ftr" id="rodape"></footer>
+
+<dialog class="pd" id="pd" aria-labelledby="pd-title"></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ativaa Store — Direções criativas</title>
+<meta name="description" content="Duas direções criativas para a vitrine digital da Ativaa Store, para validação com a proprietária.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=Big+Shoulders+Display:wght@700;900&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ---------- Página da proposta (moldura neutra) ---------- */
+:root{
+  --pg-bg:#FFFFFF; --pg-ink:#18181B; --pg-muted:#5F5F68; --pg-line:#E4E4E7; --pg-soft:#F4F4F5;
+  --focus:#2563EB;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--pg-bg);color:var(--pg-ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 16px}
+@media (min-width:768px){.wrap{padding:0 32px}}
+.doc-head{padding:48px 0 24px;border-bottom:1px solid var(--pg-line)}
+.doc-head small{color:var(--pg-muted);font-size:13px;letter-spacing:.02em}
+.doc-head h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:8px 0 12px;letter-spacing:-.02em}
+.doc-head p{max-width:720px;color:var(--pg-muted);margin:0 0 8px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.toc a{font-size:14px;text-decoration:none;padding:8px 14px;border:1px solid var(--pg-line);border-radius:999px}
+.toc a:hover{background:var(--pg-soft)}
+.note{background:var(--pg-soft);border-radius:12px;padding:14px 16px;font-size:14px;color:var(--pg-muted);margin:24px 0}
+.note b{color:var(--pg-ink)}
+.dir{padding:56px 0;border-bottom:1px solid var(--pg-line)}
+.dir-title{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;margin-bottom:8px}
+.dir-title h2{margin:0;font-size:clamp(26px,3.4vw,38px);letter-spacing:-.02em}
+.dir-title span{font-size:13px;color:var(--pg-muted);border:1px solid var(--pg-line);border-radius:999px;padding:3px 10px}
+.lede{max-width:760px;font-size:18px;margin:0 0 32px}
+.spec{display:grid;gap:16px;grid-template-columns:1fr;margin-bottom:40px}
+@media (min-width:900px){.spec{grid-template-columns:repeat(3,1fr)}}
+.card{border:1px solid var(--pg-line);border-radius:14px;padding:18px}
+.card h3{margin:0 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--pg-muted);font-weight:600}
+.card p,.card li{font-size:14px;margin:0 0 6px}
+.card ul{margin:0;padding-left:18px}
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px}
+.sw{border-radius:10px;overflow:hidden;border:1px solid var(--pg-line);font-size:12px}
+.sw i{display:block;height:44px}
+.sw div{padding:6px 8px;line-height:1.3}
+.sw code{color:var(--pg-muted);font-size:11px}
+.stage-label{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--pg-muted);font-weight:600;margin:40px 0 12px}
+.stage{display:grid;gap:20px;grid-template-columns:1fr;align-items:start}
+@media (min-width:1180px){.stage{grid-template-columns:minmax(0,1fr) 360px}}
+.frame{border:1px solid var(--pg-line);border-radius:14px;overflow:hidden;container-type:inline-size;position:relative}
+.frame-cap{font-size:12px;color:var(--pg-muted);margin-top:6px}
+.frame.mobile{max-width:360px;width:100%;justify-self:center;border-radius:28px;border-width:6px;border-color:#1f1f23}
+.motion-table{width:100%;border-collapse:collapse;font-size:14px}
+.motion-table th,.motion-table td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--pg-line);vertical-align:top}
+.motion-table th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--pg-muted);font-weight:600}
+.table-scroll{overflow-x:auto}
+.why{max-width:820px}
+.why li{margin-bottom:6px}
+.compare{width:100%;border-collapse:collapse;font-size:15px}
+.compare th,.compare td{padding:12px;border-bottom:1px solid var(--pg-line);text-align:left;vertical-align:top}
+.compare th{width:22%;color:var(--pg-muted);font-weight:600;font-size:13px}
+.toast{position:fixed;left:16px;right:16px;margin:0 auto;bottom:20px;transform:translateY(140%);max-width:560px;background:#18181B;color:#fff;padding:14px 16px;border-radius:12px;font-size:14px;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:50}
+.toast.on{transform:none}
+.toast b{display:block;font-size:12px;opacity:.7;margin-bottom:4px;font-weight:600}
+
+/* ---------- Foto real (marcador) ---------- */
+.ph{margin:0;position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.ph figcaption{position:relative;z-index:1;font:600 10px/1.35 system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;padding:8px 10px;max-width:92%}
+
+/* =========================================================
+   DIREÇÃO A — "Arranque"
+   ========================================================= */
+.A{
+  --ink:#121413; --chalk:#F5F6F1; --lime:#A3C93A; --graphite:#4A4E4B; --line:#D9DBD3; --stone:#E8E9E3;
+  --ease-a:cubic-bezier(.2,.8,.2,1);
+  background:var(--chalk);color:var(--ink);font-family:"Archivo",system-ui,sans-serif;font-stretch:100%
+}
+.A .ph{background:repeating-linear-gradient(135deg,#D3D5CE 0 2px,#DDDFD8 2px 14px)}
+.A .ph figcaption{background:var(--ink);color:var(--chalk)}
+.A-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--line)}
+.A-logo{display:flex;align-items:center;gap:8px;font:800 14px/1 "Archivo";font-stretch:115%;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+.A-logo svg{width:30px;height:30px}
+.A-links{display:none;gap:22px;font-size:13px;font-weight:600;font-stretch:110%;text-transform:uppercase;letter-spacing:.06em}
+.A-links a{text-decoration:none}
+.A-burger{width:40px;height:40px;border:1px solid var(--ink);border-radius:999px;background:none;display:grid;place-items:center;cursor:pointer}
+.A-burger i{display:block;width:16px;height:2px;background:var(--ink);box-shadow:0 5px 0 var(--ink),0 -5px 0 var(--ink)}
+@container (min-width:600px){.A-links{display:flex}.A-burger{display:none}.A-nav{padding:18px 32px}}
+
+.A-hero{display:grid;grid-template-columns:1fr;position:relative;padding-bottom:28px}
+.A-hero__photo{aspect-ratio:4/5;grid-row:1}
+.A-hero__photo{align-items:flex-start}
+.A-hero__type{grid-row:2;padding:0 16px;margin-top:-8cqi;position:relative;z-index:2}
+.A-h1{font-family:"Big Shoulders Display",sans-serif;font-weight:900;text-transform:uppercase;line-height:.84;letter-spacing:-.01em;font-size:18.5cqi;margin:0}
+.A-h1 .ln{display:block;overflow:hidden;padding-bottom:.04em}
+.A-h1 .ln > span{display:block;transform:translateY(105%);transition:transform .8s var(--ease-a)}
+.A-h1 .ln:nth-child(2) > span{transition-delay:.09s}
+.A-arc{display:block;width:92%;height:auto;margin:-1.5cqi 0 0 2%}
+.A-arc path{stroke-dasharray:640;stroke-dashoffset:640;transition:stroke-dashoffset 1s var(--ease-a) .35s}
+.A-sub{padding:16px 16px 0;margin:0;font-size:17px;font-weight:500;max-width:30ch}
+.A-sub small{display:block;color:var(--graphite);font-size:14px;font-weight:400;margin-top:4px}
+.A-ctas{display:flex;flex-direction:column;gap:10px;padding:20px 16px 0}
+.A-btn{white-space:nowrap;display:inline-flex;justify-content:center;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;background:var(--ink);color:var(--chalk);font:700 14px/1 "Archivo";font-stretch:112%;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;border:0;cursor:pointer;transition:background .2s,transform .2s var(--ease-a)}
+.A-btn:hover{background:#000;transform:translateY(-1px)}
+.A-btn .dot{width:8px;height:8px;border-radius:50%;background:var(--lime)}
+.A-btn--ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.A-btn--ghost:hover{background:var(--stone)}
+.A-btn--lime{background:var(--lime);color:var(--ink)}
+.A-btn--lime:hover{background:#B4D74E}
+@container (min-width:600px){
+  .A-hero{grid-template-columns:repeat(12,1fr);grid-template-rows:auto auto auto 1fr;padding:40px 32px 48px;column-gap:16px}
+  .A-hero__photo{grid-column:7/13;grid-row:1/5;aspect-ratio:4/5;align-items:flex-end}
+  .A-hero__type{grid-column:1/10;grid-row:1;margin:20px 0 0;padding:0}
+  .A-h1{font-size:14.5cqi}
+  .A-sub{grid-column:1/6;grid-row:2;padding:24px 0 0;font-size:19px}
+  .A-ctas{grid-column:1/6;grid-row:3;flex-direction:row;padding:26px 0 0}
+}
+.A-scroll{display:none}
+@container (min-width:600px){.A-scroll{display:flex;grid-column:1/4;grid-row:4;align-self:end;gap:10px;align-items:center;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--graphite)}.A-scroll i{width:1.5px;height:36px;background:var(--ink);display:block;animation:A-cue 1.8s var(--ease-a) infinite;transform-origin:top}}
+@keyframes A-cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+.is-in .A-h1 .ln > span{transform:none}
+.is-in .A-arc path{stroke-dashoffset:0}
+
+/* Catálogo A */
+.A-cat{padding:24px 16px 32px}
+.A-cat__head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:14px}
+.A-cat__head h2{font-family:"Big Shoulders Display";font-weight:900;text-transform:uppercase;font-size:40px;line-height:.9;margin:0}
+.A-cat__head p{margin:0;font-size:13px;color:var(--graphite)}
+.A-chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:2px 0 12px;margin:0 -16px;padding-left:16px;padding-right:16px;scroll-snap-type:x proximity}
+.A-chips::-webkit-scrollbar{display:none}
+.A-chip{flex:none;scroll-snap-align:start;position:relative;min-height:40px;padding:0 14px;border:1.5px solid var(--ink);background:transparent;border-radius:999px;font:700 12px/1 "Archivo";font-stretch:112%;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);cursor:pointer;transition:background .25s var(--ease-a),color .25s}
+.A-chip[aria-pressed="true"]{background:var(--ink);color:var(--chalk)}
+.A-chip[aria-pressed="true"]::after{content:"";position:absolute;left:12px;right:12px;bottom:7px;height:3px;border-radius:3px;background:var(--lime);animation:A-chip .35s var(--ease-a)}
+@keyframes A-chip{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.A-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 10px}
+.A-item{opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease-a),transform .5s var(--ease-a)}
+.A-item.show{opacity:1;transform:none}
+.A-item[hidden]{display:none}
+.A-item a{text-decoration:none;display:block}
+.A-item .ph{aspect-ratio:4/5;border-radius:4px}
+.A-item .ph::after{content:"";position:absolute;inset:0;background:var(--ink);opacity:0;transition:opacity .3s}
+.A-item a:hover .ph::after{opacity:.06}
+.A-tag{position:absolute;top:8px;left:8px;z-index:2;background:var(--lime);color:var(--ink);font:800 10px/1 "Archivo";font-stretch:115%;text-transform:uppercase;letter-spacing:.08em;padding:6px 8px;border-radius:999px}
+.A-name{font:800 15px/1.15 "Archivo";font-stretch:88%;text-transform:uppercase;letter-spacing:.01em;margin:10px 0 2px}
+.A-meta{font-size:12px;color:var(--graphite);display:flex;justify-content:space-between;align-items:center;gap:8px}
+.A-item .ph{background:repeating-linear-gradient(135deg,rgba(18,20,19,.07) 0 2px,transparent 2px 14px),color-mix(in srgb,var(--swatch,#D8DAD3) 50%,#E8E9E3);transition:background-color .4s var(--ease-a)}
+.A-dots{display:flex;gap:2px;margin-right:-6px}
+.A-dots button{width:28px;height:28px;padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center}
+.A-dots button::before{content:"";width:13px;height:13px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px rgba(0,0,0,.18);transition:box-shadow .25s var(--ease-a)}
+.A-dots button[aria-pressed="true"]::before{box-shadow:inset 0 0 0 1px rgba(0,0,0,.18),0 0 0 2px var(--chalk),0 0 0 3.5px var(--ink)}
+.A-colorbar{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin:0 0 16px}
+.A-colorbar span{font:700 11px/1 "Archivo";font-stretch:112%;text-transform:uppercase;letter-spacing:.08em;margin-right:6px}
+.A-cf{position:relative;width:36px;height:36px;padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center}
+.A-cf::before{content:"";width:24px;height:24px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}
+.A-cf[aria-pressed="true"]::after{content:"";position:absolute;left:8px;right:8px;bottom:0;height:3px;border-radius:3px;background:var(--lime);animation:A-chip .35s var(--ease-a)}
+.A-cf[aria-pressed="true"]::before{box-shadow:inset 0 0 0 1px rgba(0,0,0,.18),0 0 0 2px var(--chalk),0 0 0 3.5px var(--ink)}
+.A-empty{text-align:center;padding:28px 12px;font-size:15px}
+.A-look{grid-column:span 2}
+.A-look .ph{aspect-ratio:16/10;background:var(--ink)}
+.A-look .ph figcaption{background:var(--lime);color:var(--ink)}
+.A-look .A-name{font-family:"Big Shoulders Display";font-weight:900;font-size:22px}
+@container (min-width:600px){
+  .A-cat{padding:48px 32px 56px}
+  .A-cat__head h2{font-size:64px}
+  .A-chips{margin:0;padding:2px 0 18px}
+  .A-grid{grid-template-columns:repeat(4,1fr);gap:28px 16px}
+  .A-look{grid-column:span 2;grid-row:span 2}
+  .A-look .ph{aspect-ratio:auto;height:calc(100% - 52px)}
+  .A-look a{height:100%}
+}
+
+/* =========================================================
+   DIREÇÃO B — "Provador de cores"
+   ========================================================= */
+.B{
+  --ink:#201C24; --mist:#EEF0F2; --cherry:#C8213F; --butter:#F2D46B; --sage:#A9B98A; --sky:#9EC3E6; --plum:#5B4E66;
+  --tint:var(--mist);
+  --ease-b:cubic-bezier(.4,0,.2,1);
+  background:var(--tint);color:var(--ink);font-family:"Figtree",system-ui,sans-serif;
+  transition:background-color .6s var(--ease-b)
+}
+.B .ph{background:color-mix(in srgb,var(--swatch,#C9CDD3) 55%,#fff)}
+.B .ph figcaption{background:rgba(255,255,255,.85);color:var(--ink);border-radius:8px;margin:8px}
+.B-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 16px}
+.B-logo{display:flex;align-items:center;gap:8px;font:700 18px/1 "Bricolage Grotesque";letter-spacing:-.02em;text-decoration:none}
+.B-logo svg{width:30px;height:30px}
+.B-links{display:none;gap:6px;font-size:14px;font-weight:500}
+.B-links a{text-decoration:none;padding:8px 12px;border-radius:999px}
+.B-links a:hover{background:rgba(255,255,255,.6)}
+.B-menu{min-height:40px;padding:0 16px;border-radius:999px;border:0;background:var(--ink);color:#fff;font:600 14px "Figtree";cursor:pointer}
+@container (min-width:600px){.B-links{display:flex}.B-menu{display:none}.B-nav{padding:18px 32px}}
+
+.B-hero{padding:8px 16px 28px;display:grid;gap:20px}
+.B-h1{font-family:"Bricolage Grotesque";font-weight:800;font-size:15cqi;line-height:.92;letter-spacing:-.045em;margin:0;font-variation-settings:"opsz" 96}
+.B-h1 em{font-style:normal;display:inline-block;background:var(--ink);color:var(--tint);padding:0 .12em .04em;border-radius:.18em;transition:color .6s var(--ease-b)}
+.B-h1 .w{display:inline-block;opacity:0;transform:translateY(.25em);transition:opacity .6s var(--ease-b),transform .6s var(--ease-b)}
+.is-in .B-h1 .w{opacity:1;transform:none}
+.B-h1 .w:nth-child(2){transition-delay:.08s}.B-h1 .w:nth-child(3){transition-delay:.16s}.B-h1 .w:nth-child(4){transition-delay:.24s}
+.B-sub{font-size:17px;margin:0;max-width:32ch}
+.B-ctas{display:flex;flex-wrap:wrap;gap:10px}
+.B-btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;background:var(--ink);color:#fff;font:600 15px/1 "Figtree";text-decoration:none;border:0;cursor:pointer;transition:transform .2s var(--ease-b),box-shadow .2s}
+.B-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(32,28,36,.18)}
+.B-btn--soft{background:rgba(255,255,255,.75);color:var(--ink)}
+.B-arches{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto;gap:10px}
+.B-arch{border-radius:999px 999px 18px 18px;aspect-ratio:3/4.4}
+.B-arches .B-arch:first-child{grid-row:span 2;aspect-ratio:auto;min-height:100%}
+.B-colors{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;font-weight:600}
+.B-sw{width:36px;height:36px;border-radius:50%;border:0;cursor:pointer;background:var(--c);box-shadow:inset 0 0 0 1px rgba(0,0,0,.12);transition:transform .25s var(--ease-b),box-shadow .25s}
+.B-sw[aria-pressed="true"]{box-shadow:inset 0 0 0 1px rgba(0,0,0,.12),0 0 0 3px var(--tint),0 0 0 5px var(--ink);transform:scale(1.06)}
+.B-star{width:22px;height:22px;color:var(--ink);flex:none}
+@container (min-width:600px){
+  .B-hero{grid-template-columns:1.05fr 1fr;align-items:center;padding:24px 32px 56px;gap:40px}
+  .B-h1{font-size:8.6cqi}
+  .B-copy{display:grid;gap:22px}
+  .B-arches{grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto}
+  .B-arches .B-arch:first-child{grid-row:auto;aspect-ratio:3/4.4;min-height:0}
+  .B-arches .B-arch:nth-child(2){margin-top:48px}
+  .B-arches .B-arch:nth-child(3){margin-top:-24px}
+}
+
+/* Catálogo B */
+.B-cat{padding:12px 16px 32px;background:rgba(255,255,255,.55);border-radius:28px 28px 0 0}
+.B-cat__head h2{font-family:"Bricolage Grotesque";font-weight:800;font-size:34px;letter-spacing:-.035em;margin:12px 0 4px}
+.B-cat__head p{margin:0 0 14px;font-size:14px;color:var(--plum)}
+.B-filters{display:grid;gap:10px;margin-bottom:18px}
+.B-seg{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px}
+.B-seg::-webkit-scrollbar{display:none}
+.B-chip{flex:none;min-height:40px;padding:0 16px;border-radius:999px;border:0;background:#fff;color:var(--ink);font:600 14px "Figtree";cursor:pointer;transition:background .25s var(--ease-b),color .25s}
+.B-chip[aria-pressed="true"]{background:var(--ink);color:#fff}
+.B-grid{columns:2;column-gap:12px}
+.B-item{break-inside:avoid;margin-bottom:16px;opacity:0;transform:translateY(10px);transition:opacity .6s var(--ease-b),transform .6s var(--ease-b)}
+.B-item.show{opacity:1;transform:none}
+.B-item[hidden]{display:none}
+.B-item .ph{border-radius:18px;aspect-ratio:3/4;transition:background-color .4s var(--ease-b)}
+.B-item:nth-child(3n+2) .ph{aspect-ratio:3/3.6}
+.B-item:nth-child(4n) .ph{aspect-ratio:3/4.4}
+.B-name{font:700 16px/1.2 "Bricolage Grotesque";letter-spacing:-.01em;margin:10px 2px 2px}
+.B-row{display:flex;justify-content:space-between;align-items:center;margin:0 2px;font-size:13px;color:var(--plum)}
+.B-mini{display:flex;gap:5px}
+.B-mini button{width:18px;height:18px;border-radius:50%;border:0;padding:0;cursor:pointer;background:var(--c);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.B-mini button[aria-pressed="true"]{box-shadow:inset 0 0 0 1px rgba(0,0,0,.15),0 0 0 2px #fff,0 0 0 3.5px var(--ink)}
+.B-new{position:absolute;top:10px;right:10px;z-index:2;background:var(--butter);color:var(--ink);font:700 11px/1 "Figtree";padding:7px 10px;border-radius:999px;transform:rotate(4deg)}
+.B-empty{display:none;text-align:center;padding:32px 12px;font-size:15px}
+.B-empty.on{display:block}
+@container (min-width:600px){
+  .B-cat{padding:32px 32px 56px;margin:0 16px}
+  .B-cat__head{display:flex;justify-content:space-between;align-items:end;gap:20px}
+  .B-cat__head h2{font-size:52px}
+  .B-filters{grid-template-columns:auto 1fr;align-items:center}
+  .B-seg{margin:0;padding:0}
+  .B-grid{columns:4;column-gap:18px}
+}
+
+/* ---------- Produto (detalhe compacto, usado nas duas direções) ---------- */
+.pd{display:grid;gap:18px;padding:20px 16px 28px}
+.pd-gal{display:grid;grid-template-columns:1fr;gap:8px}
+.pd-main{aspect-ratio:4/5}
+.pd-thumbs{display:flex;gap:8px}
+.pd-thumbs button{flex:1;aspect-ratio:1;border:0;padding:0;cursor:pointer;border-radius:6px;overflow:hidden;opacity:.55;transition:opacity .25s}
+.pd-thumbs button[aria-current="true"]{opacity:1;outline:2px solid currentColor;outline-offset:2px}
+.pd-thumbs .ph{width:100%;height:100%}
+.pd h3{margin:0}
+.pd .opt-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:14px 0 8px}
+.pd .opts{display:flex;gap:8px;flex-wrap:wrap}
+.pd .size{min-width:48px;min-height:44px;border-radius:10px;border:1.5px solid currentColor;background:transparent;color:inherit;font:600 14px system-ui;cursor:pointer;transition:background .2s,color .2s}
+.pd .size[aria-pressed="true"]{background:currentColor}
+.pd .size[aria-pressed="true"] span{color:var(--pd-on,#fff)}
+.pd .avail{display:inline-flex;align-items:center;gap:8px;font-size:13px;margin-top:16px;padding:8px 12px;border-radius:999px;background:rgba(0,0,0,.05)}
+.pd .avail i{width:8px;height:8px;border-radius:50%;background:#C08A00}
+.pd .fine{font-size:12px;opacity:.75;margin:6px 0 0}
+@container (min-width:600px){
+  .pd{grid-template-columns:1.1fr 1fr;padding:40px 32px;gap:40px;align-items:start}
+  .pd-gal{grid-template-columns:72px 1fr}
+  .pd-thumbs{flex-direction:column;order:-1}
+  .pd-thumbs button{flex:none;width:72px;aspect-ratio:4/5}
+}
+.A .pd h3{font-family:"Big Shoulders Display";font-weight:900;text-transform:uppercase;font-size:44px;line-height:.9}
+.A .pd{--pd-on:var(--chalk)}
+.B .pd h3{font-family:"Bricolage Grotesque";font-weight:800;font-size:34px;letter-spacing:-.03em;line-height:1}
+.B .pd .pd-main,.B .pd-thumbs button{border-radius:18px}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:0s!important;animation:none!important;scroll-behavior:auto!important}
+  .A-h1 .ln > span,.B-h1 .w,.A-item,.B-item{transform:none!important;opacity:1!important}
+  .A-arc path{stroke-dashoffset:0!important}
+}
+</style>
+</head>
+<body>
+
+<header class="doc-head">
+  <div class="wrap">
+    <small>Ativaa Store · Fase 2 — Conceito e design · Proposta para validação · 02/11/2026</small>
+    <h1>Duas direções para a vitrine digital</h1>
+    <p>As duas partem do mesmo material real: o logo preto, branco e limão, as frases da bio ("Seu melhor pré-treino é um look novo!" e "Para mulheres que vivem em movimento.") e as peças coloridas que aparecem no feed. A diferença está em quem protagoniza: a marca (Direção A) ou a cor das peças (Direção B).</p>
+    <p>Os protótipos abaixo funcionam: os filtros filtram, as cores trocam, o botão do WhatsApp mostra a mensagem que seria enviada. Cada protótipo aparece no tamanho de computador e de celular, com layouts próprios para cada tela.</p>
+    <nav class="toc" aria-label="Seções">
+      <a href="#dir-a">Direção A — Arranque</a>
+      <a href="#dir-b">Direção B — Provador de cores</a>
+      <a href="#comparar">Comparação e recomendação</a>
+    </nav>
+    <div class="note"><b>Sobre as fotos e os produtos.</b> As áreas listradas ou coloridas marcam onde entra uma <b>foto real da loja</b>; a etiqueta diz qual foto do Instagram serve de referência. Não usamos imagem de banco nem foto de outra marca. Os nomes de produtos são provisórios, tirados do que aparece no feed, e os preços estão ocultos até a dona decidir se quer divulgá-los. O logo foi redesenhado só para o protótipo; o site final usa o arquivo oficial.</div>
+  </div>
+</header>
+
+<!-- ======================= DIREÇÃO A ======================= -->
+<section class="dir" id="dir-a" aria-labelledby="ha">
+  <div class="wrap">
+    <div class="dir-title"><h2 id="ha">Direção A — Arranque</h2><span>a marca na frente</span></div>
+    <p class="lede">O look como pré-treino. A página tem a energia do primeiro passo do treino: tipografia condensada em caixa alta, fundo claro de giz, preto e o limão do logo usado como faixa de energia. A faixa curva do logo vira o elemento de movimento do site inteiro: desenha-se sob o título, marca o filtro escolhido e sublinha o que está ativo.</p>
+
+    <div class="spec">
+      <div class="card">
+        <h3>Paleta</h3>
+        <div class="swatches">
+          <div class="sw"><i style="background:#121413"></i><div>Tinta<br><code>#121413</code></div></div>
+          <div class="sw"><i style="background:#F5F6F1"></i><div>Giz<br><code>#F5F6F1</code></div></div>
+          <div class="sw"><i style="background:#A3C93A"></i><div>Limão Ativa<br><code>#A3C93A*</code></div></div>
+          <div class="sw"><i style="background:#4A4E4B"></i><div>Grafite<br><code>#4A4E4B</code></div></div>
+          <div class="sw"><i style="background:#E8E9E3"></i><div>Pedra<br><code>#E8E9E3</code></div></div>
+        </div>
+        <p style="margin-top:10px;font-size:12px;color:#5F5F68">* estimado pela tela; confirmar com o arquivo do logo. O limão nunca é cor de texto sobre fundo claro (contraste insuficiente): só faixa, fundo de etiqueta e destaque.</p>
+      </div>
+      <div class="card">
+        <h3>Tipografia</h3>
+        <p style="font:900 40px/0.9 'Big Shoulders Display';text-transform:uppercase;margin-bottom:8px">Vista o seu movimento</p>
+        <p><b>Big Shoulders Display</b> 900 — títulos, sempre em caixa alta, poucas palavras.</p>
+        <p style="font-family:Archivo;font-stretch:112%;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:13px">Archivo largo · botões e rótulos</p>
+        <p style="font-family:Archivo">Archivo normal · textos e descrições. Uma família variável cobre corpo, botões e rótulos: só duas fontes no site, o que deixa a página leve.</p>
+      </div>
+      <div class="card">
+        <h3>Fotografia</h3>
+        <ul>
+          <li>Retrato vertical 4:5, corpo inteiro ou 3/4, como já é feito na porta da loja.</li>
+          <li>Cor natural da peça, sem filtro. Leve ajuste de exposição e de branco para todas ficarem parecidas.</li>
+          <li>Fundo da loja aceito; evitar fundos com marca de terceiros (banner de suplemento).</li>
+          <li>Produto sozinho: fundo branco ou giz, como o post dos shorts.</li>
+          <li>O título pode sobrepor a foto; o rosto nunca fica coberto.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="stage-label">Primeira dobra (hero)</p>
+    <div class="stage">
+      <div>
+        <div class="frame A js-reveal" data-dir="A">
+          <nav class="A-nav" aria-label="Exemplo de navegação">
+            <a class="A-logo" href="#dir-a"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#121413"/><path d="M20 8 L31 30 H26.5 L20 17 L13.5 30 H9 Z" fill="#fff"/><path d="M7 27 Q20 17 34 24" stroke="#A3C93A" stroke-width="3.4" fill="none" stroke-linecap="round"/></svg>Ativaa</a>
+            <div class="A-links"><a href="#a-cat">Catálogo</a><a href="#a-cat">Lançamentos</a><a href="#a-cat">Looks</a><a href="#a-cat">A loja</a></div>
+            <a class="A-btn A-btn--lime" href="#a-cat" style="min-height:38px;padding:0 14px;font-size:12px">WhatsApp</a>
+            <button class="A-burger" type="button" aria-label="Abrir menu"><i></i></button>
+          </nav>
+          <div class="A-hero">
+            <figure class="ph A-hero__photo"><figcaption>Foto real · top + shorts vermelho, porta da loja (post de 19/10)</figcaption></figure>
+            <div class="A-hero__type">
+              <h1 class="A-h1" aria-label="Vista o seu movimento"><span class="ln"><span>Vista o seu</span></span><span class="ln"><span>movimento</span></span></h1>
+              <svg class="A-arc" viewBox="0 0 600 70" aria-hidden="true"><path d="M8 58 Q 300 -12 592 44" stroke="#A3C93A" stroke-width="16" fill="none" stroke-linecap="round"/></svg>
+            </div>
+            <p class="A-sub">Seu melhor pré-treino é um look novo.<small>Para mulheres que vivem em movimento.</small></p>
+            <div class="A-ctas"><a class="A-btn" href="#a-cat"><span class="dot" aria-hidden="true"></span>Explorar coleção</a><a class="A-btn A-btn--ghost" href="#comparar">Conheça a Ativaa</a></div>
+            <div class="A-scroll" aria-hidden="true"><i></i>Role para ver</div>
+          </div>
+        </div>
+        <p class="frame-cap">Computador e tablet na horizontal: título enorme sobreposto à foto, que ocupa a metade direita.</p>
+      </div>
+      <div>
+        <div class="frame mobile A js-reveal" data-dir="A">
+          <nav class="A-nav"><a class="A-logo" href="#dir-a"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#121413"/><path d="M20 8 L31 30 H26.5 L20 17 L13.5 30 H9 Z" fill="#fff"/><path d="M7 27 Q20 17 34 24" stroke="#A3C93A" stroke-width="3.4" fill="none" stroke-linecap="round"/></svg>Ativaa</a><button class="A-burger" type="button" aria-label="Abrir menu"><i></i></button></nav>
+          <div class="A-hero">
+            <figure class="ph A-hero__photo"><figcaption>Foto real · top + shorts vermelho, porta da loja</figcaption></figure>
+            <div class="A-hero__type">
+              <h1 class="A-h1" aria-label="Vista o seu movimento"><span class="ln"><span>Vista o seu</span></span><span class="ln"><span>movimento</span></span></h1>
+              <svg class="A-arc" viewBox="0 0 600 70" aria-hidden="true"><path d="M8 58 Q 300 -12 592 44" stroke="#A3C93A" stroke-width="16" fill="none" stroke-linecap="round"/></svg>
+            </div>
+            <p class="A-sub">Seu melhor pré-treino é um look novo.</p>
+            <div class="A-ctas"><a class="A-btn" href="#a-cat"><span class="dot" aria-hidden="true"></span>Explorar coleção</a></div>
+          </div>
+        </div>
+        <p class="frame-cap" style="text-align:center">Celular: foto primeiro, título entra por cima dela.</p>
+      </div>
+    </div>
+
+    <p class="stage-label" id="a-cat">Catálogo — filtre por categoria ou por cor; toque nas bolinhas para trocar a foto</p>
+    <div class="stage">
+      <div>
+        <div class="frame A js-reveal" data-dir="A"><div class="A-cat" data-catalog="A"></div></div>
+        <p class="frame-cap">O bloco largo é um look: mistura peças e foto editorial no meio do catálogo.</p>
+      </div>
+      <div>
+        <div class="frame mobile A js-reveal" data-dir="A"><div class="A-cat" data-catalog="A"></div></div>
+      </div>
+    </div>
+
+    <p class="stage-label">Detalhe do produto — escolha cor e tamanho e toque no WhatsApp</p>
+    <div class="stage">
+      <div class="frame A js-reveal" data-dir="A"><div data-product="A"></div></div>
+      <div class="frame mobile A js-reveal" data-dir="A"><div data-product="A"></div></div>
+    </div>
+
+    <p class="stage-label">Linguagem de movimento — "Arranque"</p>
+    <div class="table-scroll">
+      <table class="motion-table">
+        <thead><tr><th>Momento</th><th>O que acontece</th><th>Duração · curva</th></tr></thead>
+        <tbody>
+          <tr><td>Título do hero</td><td>Cada linha sobe de dentro de uma máscara, como uma largada.</td><td>800 ms · <code>cubic-bezier(.2,.8,.2,1)</code>, 90 ms entre linhas</td></tr>
+          <tr><td>Faixa limão</td><td>Desenha-se da esquerda para a direita sob o título, uma vez.</td><td>1000 ms, começa 350 ms depois</td></tr>
+          <tr><td>Filtro escolhido</td><td>O chip fica preto e uma faixa limão cresce na base.</td><td>350 ms</td></tr>
+          <tr><td>Cards do catálogo</td><td>Sobem 14 px e aparecem, em sequência curta.</td><td>500 ms, 50 ms entre cards (máx. 8)</td></tr>
+          <tr><td>Botões</td><td>Sobem 1 px e escurecem no toque/mouse.</td><td>200 ms</td></tr>
+          <tr><td>Sem movimento</td><td>Com "reduzir movimento" ligado, tudo aparece já no lugar.</td><td>0 ms</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="stage-label">Por que esta direção</p>
+    <ul class="why">
+      <li>Usa o que a marca já tem e as clientes já reconhecem: o logo e as três cores.</li>
+      <li>O fundo neutro deixa as peças coloridas aparecerem sem disputar com a interface.</li>
+      <li>"Pré-treino" e "movimento" (da bio) viram linguagem visual: largada, faixa de energia.</li>
+      <li>Fácil de manter: o layout aguenta fotos de celular de qualidade variada, porque a força está na tipografia.</li>
+      <li>Risco: caixa alta condensada pode soar "academia" demais; seguramos com espaço generoso e poucas palavras.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= DIREÇÃO B ======================= -->
+<section class="dir" id="dir-b" aria-labelledby="hb">
+  <div class="wrap">
+    <div class="dir-title"><h2 id="hb">Direção B — Provador de cores</h2><span>as peças na frente</span></div>
+    <p class="lede">A loja como provador. O que mais chama atenção no feed é a cor das peças: cereja, manteiga, sálvia, céu. Aqui a cor escolhida pela cliente veste a página: ao tocar numa cor, o fundo do site assume um tom claro dela. As fotos ficam em molduras em arco, como a cortina de um provador, e o texto é arredondado e próximo, como o tom do Instagram.</p>
+
+    <div class="spec">
+      <div class="card">
+        <h3>Paleta</h3>
+        <div class="swatches">
+          <div class="sw"><i style="background:#201C24"></i><div>Ameixa escura<br><code>#201C24</code></div></div>
+          <div class="sw"><i style="background:#EEF0F2"></i><div>Névoa<br><code>#EEF0F2</code></div></div>
+          <div class="sw"><i style="background:#C8213F"></i><div>Cereja<br><code>#C8213F</code></div></div>
+          <div class="sw"><i style="background:#F2D46B"></i><div>Manteiga<br><code>#F2D46B</code></div></div>
+          <div class="sw"><i style="background:#A9B98A"></i><div>Sálvia<br><code>#A9B98A</code></div></div>
+          <div class="sw"><i style="background:#9EC3E6"></i><div>Céu<br><code>#9EC3E6</code></div></div>
+        </div>
+        <p style="margin-top:10px;font-size:12px;color:#5F5F68">As cores de destaque vêm das peças cadastradas no painel: quando a coleção muda, a paleta muda junto. O limão fica só no logo.</p>
+      </div>
+      <div class="card">
+        <h3>Tipografia</h3>
+        <p style="font:800 40px/0.95 'Bricolage Grotesque';letter-spacing:-.045em;margin-bottom:8px">Vista o seu movimento.</p>
+        <p><b>Bricolage Grotesque</b> 800 — títulos em frase normal, apertados, com cara de cartaz feito à mão.</p>
+        <p style="font-family:Figtree"><b>Figtree</b> — textos, botões e rótulos. Arredondada, legível em tela pequena.</p>
+      </div>
+      <div class="card">
+        <h3>Fotografia</h3>
+        <ul>
+          <li>Molduras em arco (topo arredondado) para looks e hero; cantos suaves no catálogo.</li>
+          <li>A cor da peça precisa ser fiel: fotografar perto da porta, com luz do dia.</li>
+          <li>Cada cor cadastrada pode ter sua foto: tocar na cor troca a imagem.</li>
+          <li>Fundo da foto do produto: névoa clara, para o tom do site combinar.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="stage-label">Primeira dobra (hero) — toque nas cores</p>
+    <div class="stage">
+      <div>
+        <div class="frame B js-reveal" data-dir="B">
+          <nav class="B-nav"><a class="B-logo" href="#dir-b"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#121413"/><path d="M20 8 L31 30 H26.5 L20 17 L13.5 30 H9 Z" fill="#fff"/><path d="M7 27 Q20 17 34 24" stroke="#A3C93A" stroke-width="3.4" fill="none" stroke-linecap="round"/></svg>Ativaa Store</a>
+            <div class="B-links"><a href="#b-cat">Catálogo</a><a href="#b-cat">Novidades</a><a href="#b-cat">Looks</a><a href="#b-cat">Visite a loja</a></div>
+            <button class="B-menu" type="button">Menu</button></nav>
+          <div class="B-hero">
+            <div class="B-copy">
+              <h1 class="B-h1"><span class="w">Vista</span> <span class="w">o</span> <span class="w">seu</span> <span class="w"><em>movimento.</em></span></h1>
+              <p class="B-sub">Seu melhor pré-treino é um look novo. Escolha uma cor e veja as peças dela.</p>
+              <div class="B-colors" role="group" aria-label="Cores da coleção" data-tint-group>
+                <svg class="B-star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.2 6.6 6.9.2-5.5 4.2 2 6.6L12 16.2 6.4 20.1l2-6.6-5.5-4.2 6.9-.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                <button class="B-sw" style="--c:#C8213F" data-tint="#C8213F" aria-pressed="false" aria-label="Cereja"></button>
+                <button class="B-sw" style="--c:#F2D46B" data-tint="#F2D46B" aria-pressed="false" aria-label="Manteiga"></button>
+                <button class="B-sw" style="--c:#A9B98A" data-tint="#A9B98A" aria-pressed="false" aria-label="Sálvia"></button>
+                <button class="B-sw" style="--c:#9EC3E6" data-tint="#9EC3E6" aria-pressed="false" aria-label="Céu"></button>
+              </div>
+              <div class="B-ctas"><a class="B-btn" href="#b-cat">Explorar coleção</a><a class="B-btn B-btn--soft" href="#comparar">Conheça a Ativaa</a></div>
+            </div>
+            <div class="B-arches">
+              <figure class="ph B-arch" style="--swatch:#F2D46B"><figcaption>Foto real · macacão amarelo, loja (29/09)</figcaption></figure>
+              <figure class="ph B-arch" style="--swatch:#A9B98A"><figcaption>Foto real · saia-short verde (06/10)</figcaption></figure>
+              <figure class="ph B-arch" style="--swatch:#9EC3E6"><figcaption>Foto real · macacão azul, parque</figcaption></figure>
+            </div>
+          </div>
+        </div>
+        <p class="frame-cap">Computador: texto à esquerda, três arcos desencontrados à direita.</p>
+      </div>
+      <div>
+        <div class="frame mobile B js-reveal" data-dir="B">
+          <nav class="B-nav"><a class="B-logo" href="#dir-b"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#121413"/><path d="M20 8 L31 30 H26.5 L20 17 L13.5 30 H9 Z" fill="#fff"/><path d="M7 27 Q20 17 34 24" stroke="#A3C93A" stroke-width="3.4" fill="none" stroke-linecap="round"/></svg>Ativaa</a><button class="B-menu" type="button">Menu</button></nav>
+          <div class="B-hero">
+            <div class="B-arches">
+              <figure class="ph B-arch" style="--swatch:#F2D46B"><figcaption>Foto real · macacão amarelo</figcaption></figure>
+              <figure class="ph B-arch" style="--swatch:#A9B98A"><figcaption>Saia-short verde</figcaption></figure>
+              <figure class="ph B-arch" style="--swatch:#9EC3E6"><figcaption>Macacão azul</figcaption></figure>
+            </div>
+            <div class="B-copy">
+              <h1 class="B-h1"><span class="w">Vista</span> <span class="w">o</span> <span class="w">seu</span> <span class="w"><em>movimento.</em></span></h1>
+              <div class="B-colors" role="group" aria-label="Cores da coleção" data-tint-group style="margin-top:14px">
+                <button class="B-sw" style="--c:#C8213F" data-tint="#C8213F" aria-pressed="false" aria-label="Cereja"></button>
+                <button class="B-sw" style="--c:#F2D46B" data-tint="#F2D46B" aria-pressed="false" aria-label="Manteiga"></button>
+                <button class="B-sw" style="--c:#A9B98A" data-tint="#A9B98A" aria-pressed="false" aria-label="Sálvia"></button>
+                <button class="B-sw" style="--c:#9EC3E6" data-tint="#9EC3E6" aria-pressed="false" aria-label="Céu"></button>
+              </div>
+              <div class="B-ctas" style="margin-top:16px"><a class="B-btn" href="#b-cat" style="flex:1">Explorar coleção</a></div>
+            </div>
+          </div>
+        </div>
+        <p class="frame-cap" style="text-align:center">Celular: arcos no topo, cores ao alcance do polegar.</p>
+      </div>
+    </div>
+
+    <p class="stage-label" id="b-cat">Catálogo — filtre por categoria ou por cor</p>
+    <div class="stage">
+      <div><div class="frame B js-reveal" data-dir="B"><div data-catalog="B"></div></div></div>
+      <div><div class="frame mobile B js-reveal" data-dir="B"><div data-catalog="B"></div></div></div>
+    </div>
+
+    <p class="stage-label">Detalhe do produto — escolha cor e tamanho e toque no WhatsApp</p>
+    <div class="stage">
+      <div class="frame B js-reveal" data-dir="B"><div data-product="B"></div></div>
+      <div class="frame mobile B js-reveal" data-dir="B"><div data-product="B"></div></div>
+    </div>
+
+    <p class="stage-label">Linguagem de movimento — "Respiro"</p>
+    <div class="table-scroll">
+      <table class="motion-table">
+        <thead><tr><th>Momento</th><th>O que acontece</th><th>Duração · curva</th></tr></thead>
+        <tbody>
+          <tr><td>Troca de cor</td><td>O fundo da página passa suavemente para o tom claro da cor escolhida.</td><td>600 ms · <code>cubic-bezier(.4,0,.2,1)</code></td></tr>
+          <tr><td>Título do hero</td><td>Palavras sobem um pouco e aparecem, uma após a outra.</td><td>600 ms, 80 ms entre palavras</td></tr>
+          <tr><td>Foto do produto</td><td>Ao trocar a cor, a imagem troca por dissolução, sem salto.</td><td>400 ms</td></tr>
+          <tr><td>Cards do catálogo</td><td>Aparecem em sequência curta ao entrar na tela.</td><td>600 ms, 60 ms entre cards (máx. 8)</td></tr>
+          <tr><td>Etiqueta "Novo"</td><td>Levemente inclinada, parada. Sem animação contínua.</td><td>—</td></tr>
+          <tr><td>Sem movimento</td><td>Com "reduzir movimento", a cor troca na hora e nada se desloca.</td><td>0 ms</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="stage-label">Por que esta direção</p>
+    <ul class="why">
+      <li>Coloca no centro o que mais vende no feed: a cor das peças.</li>
+      <li>Filtrar por cor é útil de verdade, e a cor é um campo que a loja já vai cadastrar.</li>
+      <li>Tom próximo e arredondado, parecido com o jeito de falar do Instagram.</li>
+      <li>Risco: depende de fotos com cor fiel. Foto amarelada ou escura enfraquece a ideia.</li>
+      <li>Risco: o logo preto e limão fica menos presente; a marca aparece mais pelo tom do que pela cor.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= COMPARAÇÃO ======================= -->
+<section class="dir" id="comparar" aria-labelledby="hc" style="border-bottom:0">
+  <div class="wrap">
+    <div class="dir-title"><h2 id="hc">Comparação e recomendação</h2></div>
+    <div class="table-scroll">
+      <table class="compare">
+        <tbody>
+          <tr><th>Protagonista</th><td>A — a marca (logo, limão, tipografia)</td><td>B — as peças (cor, foto)</td></tr>
+          <tr><th>Sensação</th><td>Energia, largada, confiança</td><td>Leveza, proximidade, vitrine</td></tr>
+          <tr><th>Elemento-assinatura</th><td>Faixa limão do logo que se desenha e marca o que está ativo</td><td>A página assume o tom da cor escolhida</td></tr>
+          <tr><th>Exigência de fotos</th><td>Média: aguenta fotos de celular variadas</td><td>Alta: precisa de cor fiel e luz parecida</td></tr>
+          <tr><th>Peso técnico</th><td>Baixo: CSS e um SVG</td><td>Baixo: CSS com variável de cor</td></tr>
+          <tr><th>Painel</th><td>Mesmo painel nas duas: as diferenças são só visuais</td><td>Precisa de cor em hexadecimal em cada variação (seletor de cor no painel)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="lede" style="margin-top:28px"><b>Recomendação: Direção A como base</b>, levando da B a troca de foto ao tocar na cor e o filtro por cor no catálogo. A marca já tem uma identidade reconhecível no logo; a Direção A a fortalece em vez de substituí-la, e é a que menos sofre com fotos de celular. A decisão é da proprietária: as duas são viáveis no mesmo custo e no mesmo painel.</p>
+    <div class="note"><b>Versão combinada já no protótipo.</b> O catálogo da Direção A acima já tem o que veio da B: a linha "Cor" filtra as peças, e tocar numa bolinha de cor no card troca a foto daquela peça. A página do produto também troca a foto ao escolher a cor. <b>Status: aguardando validação da proprietária.</b></div>
+  </div>
+</section>
+
+<div class="toast" role="status" aria-live="polite"><b>Mensagem que abriria no WhatsApp</b><span></span></div>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const WHATS = '5531990004933'; // virá das configurações do painel
+
+  // Produtos provisórios: só peças vistas no feed. Nomes e categorias a confirmar.
+  const C = {cereja:['Cereja','#C8213F'],manteiga:['Manteiga','#F2D46B'],salvia:['Sálvia','#A9B98A'],ceu:['Céu','#9EC3E6'],branco:['Branco','#F7F7F5'],preto:['Preto','#1B1B1D']};
+  const items = [
+    {n:'Shorts com viés',cat:'Shorts',cores:['salvia','ceu','branco'],novo:true,ref:'post de produto, fundo branco'},
+    {n:'Macacão',cat:'Macacões',cores:['manteiga'],ref:'loja, 29/09'},
+    {n:'Conjunto Atena',cat:'Conjuntos',cores:['preto'],novo:true,ref:'academia, 30/09'},
+    {n:'Top + shorts',cat:'Conjuntos',cores:['cereja','manteiga'],ref:'porta da loja'},
+    {look:true,n:'Look porta da loja',ref:'regata branca + shorts céu'},
+    {n:'Saia-short plissada',cat:'Shorts',cores:['salvia'],ref:'post de 06/10'},
+    {n:'Macacão flare',cat:'Macacões',cores:['ceu'],ref:'parque'},
+    {n:'Regata',cat:'Regatas',cores:['branco'],ref:'porta da loja, 03/10'},
+    {n:'Calça flare',cat:'Calças',cores:['ceu'],ref:'loja, 03/10'}
+  ];
+  const cats = ['Tudo',...new Set(items.filter(i=>!i.look).map(i=>i.cat))];
+
+  const dots = (cs) => cs.map(k=>`<i style="background:${C[k][1]}" title="${C[k][0]}"></i>`).join('');
+
+  // Direção A + o que veio da B: filtro por cor e troca de foto ao tocar na cor
+  function buildA(root){
+    const allColors = [...new Set(items.flatMap(i=>i.cores||[]))];
+    root.innerHTML = `
+      <div class="A-cat__head"><h2>Catálogo</h2><p data-count>${items.filter(i=>!i.look).length} peças</p></div>
+      <div class="A-chips" role="group" aria-label="Filtrar por categoria">${cats.map((c,i)=>`<button class="A-chip" type="button" aria-pressed="${i===0}" data-f="${c}">${c}</button>`).join('')}</div>
+      <div class="A-colorbar" role="group" aria-label="Filtrar por cor"><span>Cor</span>${allColors.map(k=>`<button class="A-cf" type="button" style="--c:${C[k][1]}" aria-pressed="false" aria-label="${C[k][0]}" data-c="${k}"></button>`).join('')}</div>
+      <div class="A-grid">${items.map(it=> it.look
+        ? `<article class="A-item A-look" data-cat="look"><a href="#dir-a"><figure class="ph"><figcaption>Foto real · ${it.ref}</figcaption></figure><p class="A-name">${it.n}</p><div class="A-meta">2 peças · ver o look</div></a></article>`
+        : `<article class="A-item" data-cat="${it.cat}" data-cores="${it.cores.join(' ')}"><a href="#dir-a"><figure class="ph" style="--swatch:${C[it.cores[0]][1]}">${it.novo?'<span class="A-tag">Novo</span>':''}<figcaption>${it.ref} · ${C[it.cores[0]][0].toLowerCase()}</figcaption></figure><p class="A-name">${it.n}</p></a><div class="A-meta"><span>${it.cat}</span><span class="A-dots">${it.cores.map((k,j)=>`<button type="button" style="--c:${C[k][1]}" aria-label="Ver em ${C[k][0]}" aria-pressed="${j===0}" data-k="${k}"></button>`).join('')}</span></div></article>`).join('')}
+      </div>
+      <p class="A-empty" hidden>Nenhuma peça nessa combinação. <button class="A-chip" type="button" data-reset>Limpar filtros</button></p>`;
+    let cat='Tudo', cor=null;
+    const showColor = (card,k) => {
+      card.querySelectorAll('.A-dots button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.k===k));
+      const ph = card.querySelector('.ph'); ph.style.setProperty('--swatch',C[k][1]);
+      const cap = ph.querySelector('figcaption'); cap.textContent = cap.textContent.replace(/ · [^·]+$/, ' · '+C[k][0].toLowerCase());
+    };
+    const apply = () => {
+      filter(root,'.A-item', el => el.dataset.cat==='look' ? (cat==='Tudo' && !cor)
+        : (cat==='Tudo'||el.dataset.cat===cat) && (!cor||el.dataset.cores.split(' ').includes(cor)));
+      if (cor) root.querySelectorAll('.A-item:not([hidden])[data-cores]').forEach(card=>showColor(card,cor));
+      const n = root.querySelectorAll('.A-item[data-cores]:not([hidden])').length;
+      root.querySelector('[data-count]').textContent = `${n} ${n===1?'peça':'peças'}`;
+      root.querySelector('.A-empty').hidden = n>0;
+    };
+    root.querySelectorAll('.A-chip[data-f]').forEach(b=>b.addEventListener('click',()=>{
+      cat=b.dataset.f; root.querySelectorAll('.A-chip[data-f]').forEach(x=>x.setAttribute('aria-pressed', x===b)); apply();
+    }));
+    root.querySelectorAll('.A-cf').forEach(b=>b.addEventListener('click',()=>{
+      cor = cor===b.dataset.c ? null : b.dataset.c; root.querySelectorAll('.A-cf').forEach(x=>x.setAttribute('aria-pressed', x.dataset.c===cor)); apply();
+    }));
+    root.querySelector('[data-reset]').addEventListener('click',()=>{
+      cat='Tudo'; cor=null;
+      root.querySelectorAll('.A-chip[data-f]').forEach((x,i)=>x.setAttribute('aria-pressed', i===0));
+      root.querySelectorAll('.A-cf').forEach(x=>x.setAttribute('aria-pressed','false')); apply();
+    });
+    root.querySelectorAll('.A-dots button').forEach(b=>b.addEventListener('click',()=>showColor(b.closest('.A-item'), b.dataset.k)));
+  }
+
+  function buildB(root){
+    const allColors = [...new Set(items.flatMap(i=>i.cores||[]))];
+    root.innerHTML = `<div class="B-cat">
+      <div class="B-cat__head"><div><h2>Catálogo</h2><p>Disponibilidade atualizada pela loja. Confirme pelo WhatsApp.</p></div></div>
+      <div class="B-filters">
+        <div class="B-seg" role="group" aria-label="Filtrar por categoria">${cats.map((c,i)=>`<button class="B-chip" type="button" aria-pressed="${i===0}" data-f="${c}">${c}</button>`).join('')}</div>
+        <div class="B-colors" role="group" aria-label="Filtrar por cor">${allColors.map(k=>`<button class="B-sw" type="button" style="--c:${C[k][1]};width:30px;height:30px" aria-pressed="false" aria-label="${C[k][0]}" data-c="${k}"></button>`).join('')}</div>
+      </div>
+      <div class="B-grid">${items.filter(i=>!i.look).map(it=>`<article class="B-item" data-cat="${it.cat}" data-cores="${it.cores.join(' ')}">
+        <figure class="ph" style="--swatch:${C[it.cores[0]][1]}">${it.novo?'<span class="B-new">Novo</span>':''}<figcaption>${it.ref}</figcaption></figure>
+        <p class="B-name">${it.n}</p>
+        <div class="B-row"><span>${it.cat}</span><span class="B-mini">${it.cores.map((k,j)=>`<button type="button" style="--c:${C[k][1]}" aria-label="Ver em ${C[k][0]}" aria-pressed="${j===0}" data-k="${k}"></button>`).join('')}</span></div>
+      </article>`).join('')}</div>
+      <p class="B-empty">Nenhuma peça nessa combinação. <button class="B-chip" type="button" data-reset>Limpar filtros</button></p>
+    </div>`;
+    let cat='Tudo', cor=null;
+    const frame = root.closest('.frame');
+    const apply = () => {
+      filter(root,'.B-item', el => (cat==='Tudo'||el.dataset.cat===cat) && (!cor||el.dataset.cores.split(' ').includes(cor)));
+      frame.style.setProperty('--tint', cor ? mix(C[cor][1]) : '');
+      if (cor) root.querySelectorAll(`.B-mini button[data-k="${cor}"]`).forEach(b=>b.click()); // card mostra a cor filtrada
+    };
+    root.querySelectorAll('.B-chip[data-f]').forEach(b=>b.addEventListener('click',()=>{cat=b.dataset.f;root.querySelectorAll('.B-chip[data-f]').forEach(x=>x.setAttribute('aria-pressed',x===b));apply();}));
+    root.querySelectorAll('.B-sw[data-c]').forEach(b=>b.addEventListener('click',()=>{cor = cor===b.dataset.c?null:b.dataset.c;root.querySelectorAll('.B-sw[data-c]').forEach(x=>x.setAttribute('aria-pressed',x.dataset.c===cor));apply();}));
+    root.querySelector('[data-reset]').addEventListener('click',()=>{cat='Tudo';cor=null;root.querySelectorAll('.B-chip[data-f]').forEach((x,i)=>x.setAttribute('aria-pressed',i===0));root.querySelectorAll('.B-sw[data-c]').forEach(x=>x.setAttribute('aria-pressed','false'));apply();});
+    root.querySelectorAll('.B-mini button').forEach(b=>b.addEventListener('click',()=>{
+      const card=b.closest('.B-item');card.querySelectorAll('.B-mini button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+      card.querySelector('.ph').style.setProperty('--swatch',C[b.dataset.k][1]);
+    }));
+  }
+
+  function buildProduct(root, dir){
+    const p = {n:'Shorts com viés', cat:'Shorts', cores:['salvia','ceu','branco'], tam:['P','M','G','GG']};
+    let cor = p.cores[0], tam = null;
+    root.innerHTML = `<div class="pd">
+      <div class="pd-gal">
+        <figure class="ph pd-main" style="--swatch:${C[cor][1]}"><figcaption>Foto real · shorts ${C[cor][0].toLowerCase()} (post de produto)</figcaption></figure>
+        <div class="pd-thumbs">${[0,1,2].map(i=>`<button type="button" aria-label="Foto ${i+1}" aria-current="${i===0}"><figure class="ph" style="--swatch:${C[p.cores[i]][1]}"></figure></button>`).join('')}</div>
+      </div>
+      <div>
+        <p style="margin:0 0 6px;font-size:13px;opacity:.75">${p.cat}</p>
+        <h3>${p.n}</h3>
+        <p style="margin:12px 0 0;font-size:15px">Descrição e composição entram aqui quando a loja confirmar.</p>
+        <p class="opt-label">Cor: <span data-cor-name>${C[cor][0]}</span></p>
+        <div class="opts" role="group" aria-label="Cor">${p.cores.map((k,i)=>`<button type="button" class="B-sw" style="--c:${C[k][1]};width:40px;height:40px" aria-label="${C[k][0]}" aria-pressed="${i===0}" data-k="${k}"></button>`).join('')}</div>
+        <p class="opt-label">Tamanho</p>
+        <div class="opts" role="group" aria-label="Tamanho">${p.tam.map(t=>`<button type="button" class="size" aria-pressed="false" data-t="${t}"><span>${t}</span></button>`).join('')}</div>
+        <div class="avail"><i aria-hidden="true"></i>Consultar disponibilidade</div>
+        <p class="fine">Informação atualizada manualmente pela loja.</p>
+        <div style="margin-top:18px;display:grid;gap:10px">
+          <button type="button" class="${dir==='A'?'A-btn':'B-btn'}" data-wa>Consultar no WhatsApp</button>
+        </div>
+      </div></div>`;
+    const main = root.querySelector('.pd-main');
+    root.querySelectorAll('[data-k]').forEach(b=>b.addEventListener('click',()=>{
+      cor=b.dataset.k;root.querySelectorAll('[data-k]').forEach(x=>x.setAttribute('aria-pressed',x===b));
+      root.querySelector('[data-cor-name]').textContent=C[cor][0];
+      main.style.opacity = reduce?1:0;
+      setTimeout(()=>{main.style.setProperty('--swatch',C[cor][1]);main.querySelector('figcaption').textContent=`Foto real · shorts ${C[cor][0].toLowerCase()}`;main.style.opacity=1;}, reduce?0:180);
+    }));
+    main.style.transition='opacity .2s';
+    root.querySelectorAll('[data-t]').forEach(b=>b.addEventListener('click',()=>{
+      tam = tam===b.dataset.t?null:b.dataset.t;root.querySelectorAll('[data-t]').forEach(x=>x.setAttribute('aria-pressed',x.dataset.t===tam));
+    }));
+    root.querySelectorAll('.pd-thumbs button').forEach(b=>b.addEventListener('click',()=>{
+      root.querySelectorAll('.pd-thumbs button').forEach(x=>x.setAttribute('aria-current',x===b));
+      main.style.setProperty('--swatch', getComputedStyle(b.querySelector('.ph')).getPropertyValue('--swatch'));
+    }));
+    root.querySelector('[data-wa]').addEventListener('click',()=>{
+      let msg = `Olá! Vi o produto ${p.n} no catálogo da Ativaa Store e gostaria de consultar a disponibilidade.`;
+      const extra = [`cor ${C[cor][0]}`, tam && `tamanho ${tam}`].filter(Boolean).join(', ');
+      if (extra) msg = msg.replace('disponibilidade.', `disponibilidade (${extra}).`);
+      toast(msg, `https://wa.me/${WHATS}?text=${encodeURIComponent(msg)}`);
+    });
+  }
+
+  function filter(root, sel, keep){
+    let shown=0;
+    root.querySelectorAll(sel).forEach(el=>{
+      const k = keep(el); el.hidden=!k;
+      if(k){ el.classList.remove('show'); const d=Math.min(shown++,8)*(reduce?0:55); setTimeout(()=>el.classList.add('show'), 20+d); }
+    });
+    const empty = root.querySelector('.B-empty'); if (empty) empty.classList.toggle('on', shown===0);
+  }
+  function mix(hex){ // tom claro da cor (85% branco)
+    const n=parseInt(hex.slice(1),16), r=n>>16, g=(n>>8)&255, b=n&255, m=v=>Math.round(v*.18+255*.82);
+    return `rgb(${m(r)},${m(g)},${m(b)})`;
+  }
+  const t = document.querySelector('.toast'); let tt;
+  function toast(msg, url){ t.querySelector('span').innerHTML = `${msg}<br><small style="opacity:.6;word-break:break-all">${url.slice(0,70)}…</small>`; t.classList.add('on'); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove('on'),6000); }
+
+  document.querySelectorAll('[data-catalog="A"]').forEach(buildA);
+  document.querySelectorAll('[data-catalog="B"]').forEach(buildB);
+  document.querySelectorAll('[data-product]').forEach(r=>buildProduct(r, r.dataset.product));
+
+  // Cores do hero B: tingem o próprio quadro
+  document.querySelectorAll('[data-tint-group]').forEach(g=>{
+    const frame=g.closest('.frame');
+    g.querySelectorAll('[data-tint]').forEach(b=>b.addEventListener('click',()=>{
+      const on = b.getAttribute('aria-pressed')!=='true';
+      g.querySelectorAll('[data-tint]').forEach(x=>x.setAttribute('aria-pressed', on && x===b));
+      frame.style.setProperty('--tint', on ? mix(b.dataset.tint) : '');
+    }));
+  });
+
+  // Revelação ao entrar na tela
+  const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-in'); e.target.querySelectorAll('.A-item,.B-item').forEach((el,i)=>setTimeout(()=>el.classList.add('show'), reduce?0:Math.min(i,8)*55)); io.unobserve(e.target);} }),{threshold:.2});
+  document.querySelectorAll('.js-reveal').forEach(el=>io.observe(el));
+})();
+</script>
+</body>
+</html>
