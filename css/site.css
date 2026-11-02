@@ -45,7 +45,7 @@ button{font:inherit;color:inherit}
 .hdr.scrolled{border-bottom-color:var(--line)}
 .hdr-in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;transition:min-height .3s var(--ease)}
 .hdr.scrolled .hdr-in{min-height:56px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 15px/1 var(--f-body);font-stretch:118%;letter-spacing:.08em;text-transform:uppercase}
+.logo{display:flex;align-items:center;gap:10px;white-space:nowrap;text-decoration:none;font:800 15px/1 var(--f-body);font-stretch:118%;letter-spacing:.08em;text-transform:uppercase}
 .logo svg{width:34px;height:34px;flex:none}
 .nav{display:none;gap:28px}
 .nav a{font:700 13px/1 var(--f-body);font-stretch:110%;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;padding:8px 0;position:relative}
@@ -70,7 +70,7 @@ button{font:inherit;color:inherit}
 .hero-photo{margin:0 calc(var(--gutter)*-1);aspect-ratio:4/5;max-height:72vh;overflow:hidden;background:var(--stone)}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;transform:scale(1.04);transition:transform 1.4s var(--ease)}
 .is-in .hero-photo img{transform:none}
-.hero-type{position:relative;z-index:2;margin-top:-9vw}
+.hero-type{position:relative;z-index:2;margin-top:18px}
 .hero h1{font:900 clamp(64px,19vw,220px)/.84 var(--f-display);text-transform:uppercase;letter-spacing:-.01em;margin:0}
 .hero h1 .ln{display:block;overflow:hidden;padding-bottom:.04em}
 .hero h1 .ln>span{display:block;transform:translateY(105%);transition:transform .8s var(--ease)}
